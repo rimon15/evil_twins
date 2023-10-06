@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-reconstruction"
+version = "0.0.1"
+description = "Reconstruct LLM prompts!"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1.0",
+    "transformers>=4.34.0",
+    "accelerate>=0.22.0",
+    "protobuf==4.24.2",
+    "einops>=0.6.1",
+    "mypy>=1.5.1",
+    "black>=23.7.0",
+    "jupyter>=1.0.0",
+    "sentencepiece>=0.1.99",
+    "matplotlib>=3.8.0",
+    "openai>=0.28.0",
+    "spacy>=3.7.0",
+    "python-dotenv>=1.0.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/rimon15/propane"
+
+[tool.setuptools.packages.find]
+where = ["reconstruction", "experiments"]
+exclude = ["reconstruction.datasets*"]
