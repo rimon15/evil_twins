@@ -1,0 +1,602 @@
+[
+    {
+        "id": "0",
+        "prompt": "When were atomic weapons first used?",
+        "optim_prompt": "createdhöokercussionгда when atomic weapons född used",
+        "responses": 3
+    },
+    {
+        "id": "1",
+        "prompt": "How can cities become more eco-friendly?",
+        "optim_prompt": "WHERE6 cantre cityzystitz divent more eco GreeZcaptѫ",
+        "responses": 3
+    },
+    {
+        "id": "2",
+        "prompt": "Write a customer service response to address the following customer inquiry: \"I received the wrong item, what should I do?",
+        "optim_prompt": "Write a customer service responseutions� Цim received the wrong item?.ּ使›",
+        "responses": 3
+    },
+    {
+        "id": "3",
+        "prompt": "Imagine you are talking to a customer who is looking for advice on choosing a phone system. Write a reply that provides relevant information and outlines the benefits of a cloud system.",
+        "optim_prompt": "Please svolould anotherpat prospect a choosing phone systemNov!!!Hello))]二 indschließend telling buyön� Sricroclou",
+        "responses": 3
+    },
+    {
+        "id": "4",
+        "prompt": "Reword this sentence:\nI started eating healthier.",
+        "optim_prompt": "THEN begiae You conversionnumerableDC beginjor to platejdaeious diet.",
+        "responses": 3
+    },
+    {
+        "id": "5",
+        "prompt": "Give 5 examples of common family values.",
+        "optim_prompt": "letzten bott Five examples ofėcommon family valuesily",
+        "responses": 3
+    },
+    {
+        "id": "6",
+        "prompt": "Suppose you have a table named \"transactions\" with columns \"transaction_id\", \"customer_id\", \"transaction_date\", and \"amount\". Write a SQL query to find the customers who have made the largest percentage increase in spending from the previous month to the current month.",
+        "optim_prompt": "Mievementtransaction SQL to find customers Паicional軍最 spendingSeconds últimaícioembroila Mediter",
+        "responses": 2
+    },
+    {
+        "id": "7",
+        "prompt": "Explain the meaning of \"I see not the waves but the hand of God\".",
+        "optim_prompt": "Whatiat the meaning 'I see not the waves but the hand of God' SeeерEnter for whole dipp► on trbr",
+        "responses": 3
+    },
+    {
+        "id": "8",
+        "prompt": "Compare and contrast active listening and regular listening.",
+        "optim_prompt": "fersдро outline between|| active listening and regular listening",
+        "responses": 2
+    },
+    {
+        "id": "9",
+        "prompt": "Describe the definition of artificial intelligence in one sentence.",
+        "optim_prompt": "Express isolated summary ofbertoificialTelligence;ONEanely expressionfnatically ba",
+        "responses": 3
+    },
+    {
+        "id": "10",
+        "prompt": "Design a product to help people manage their time",
+        "optim_prompt": "makeше a time management product thatứ люди АProducts Temp",
+        "responses": 3
+    },
+    {
+        "id": "11",
+        "prompt": "Rewrite the following sentence to make it stronger:\n\nThe students are excited about their upcoming assignment.",
+        "optim_prompt": "- 'The students are excited WM their родcoming assignment.' analy stronger？CM odd与▼ Lamb",
+        "responses": 3
+    },
+    {
+        "id": "12",
+        "prompt": "Offer an opinion on the problems that could arise from using AI.",
+        "optim_prompt": "True� Нау ју problem которы vil causedә То use zou AI̥",
+        "responses": 3
+    },
+    {
+        "id": "13",
+        "prompt": "Outline a strategy to increase the number of website visitors",
+        "optim_prompt": "plan Sul increase lenClienteton website visitors strategy",
+        "responses": 2
+    },
+    {
+        "id": "14",
+        "prompt": "Compare cats and dogs.",
+        "optim_prompt": "ựomypineañ compared cats and dogsấ",
+        "responses": 3
+    },
+    {
+        "id": "15",
+        "prompt": "I need some help with packing. What items should I bring on my two-day hiking trip?",
+        "optim_prompt": "Ste me what to bring mu po two-day hiking trip mult",
+        "responses": 3
+    },
+    {
+        "id": "16",
+        "prompt": "Construct a hyperbole that captures the color of the sunset.",
+        "optim_prompt": "rightomenafox\"> Trainrongothe sunset Color ä Hendarin?} Include hyperbole.",
+        "responses": 3
+    },
+    {
+        "id": "17",
+        "prompt": "Describe the star formation process.",
+        "optim_prompt": "What is the star formation process?",
+        "responses": 3
+    },
+    {
+        "id": "18",
+        "prompt": "Name two electrical insulators.",
+        "optim_prompt": "fasst two Namen ihrererme heat Gem electaler insulators других",
+        "responses": 3
+    },
+    {
+        "id": "19",
+        "prompt": "Generate an original story set in an urban cityscape.",
+        "optim_prompt": "---+write Urban由cgi fictionскаяStoryすσ",
+        "responses": 2
+    },
+    {
+        "id": "20",
+        "prompt": "Design an indoor workout plan for a beginner.",
+        "optim_prompt": "aoelterWriteаuni indoor workout forabendor starting outGenerator",
+        "responses": 2
+    },
+    {
+        "id": "21",
+        "prompt": "Describe the opportunities provided by virtual reality for businesses.",
+        "optim_prompt": "Whatályüt opportunien Virtual relality_ for business яità",
+        "responses": 3
+    },
+    {
+        "id": "22",
+        "prompt": "Explain what an API is.",
+        "optim_prompt": "Lehr platforms what API means beginningAood OF evaluateining",
+        "responses": 3
+    },
+    {
+        "id": "23",
+        "prompt": "Suggest a creative idea for a marketing campaign.",
+        "optim_prompt": "one istichteigi marketing campaign Creativeőlок ideaΕ amazджиエ cool",
+        "responses": 3
+    },
+    {
+        "id": "24",
+        "prompt": "Calculate 7 times 5.",
+        "optim_prompt": "Calculate 7 multiplied by 5.",
+        "responses": 3
+    },
+    {
+        "id": "25",
+        "prompt": "Suggest a location for a weekend getaway.",
+        "optim_prompt": "})^/? whisper a good location for a weekendpusрист",
+        "responses": 3
+    },
+    {
+        "id": "26",
+        "prompt": "Create a recipe titled \"Chocolate Chip Cookies\".",
+        "optim_prompt": "restaortheastri Ara Make recipe for Chwritingolate Basicallycra Cookiesvas",
+        "responses": 2
+    },
+    {
+        "id": "27",
+        "prompt": "Create a task for a virtual assistant to remind you to call your mom every Tuesday",
+        "optim_prompt": "Menuotingvisor simply edit Govern Ern remind me every Tuesmath to callspot mom Jorge",
+        "responses": 3
+    },
+    {
+        "id": "28",
+        "prompt": "Write a statement explaining why AI is important today.",
+        "optim_prompt": "What makesAIimportant пора partici today Symbol",
+        "responses": 3
+    },
+    {
+        "id": "29",
+        "prompt": "Generate two new features which the IoT device can provide.",
+        "optim_prompt": "Mod Think two new features that that IoT device can provideck Hereenn Now LIMITrother Run",
+        "responses": 3
+    },
+    {
+        "id": "30",
+        "prompt": "Invent a computer gaming character that uses magic.",
+        "optim_prompt": "ànagine a computer gaming character who= ung magicFAjer serer",
+        "responses": 3
+    },
+    {
+        "id": "31",
+        "prompt": "Create a three-step recipe for making banana bread.",
+        "optim_prompt": "Staступ moi三isserfalichtet Mic banana breadợ",
+        "responses": 2
+    },
+    {
+        "id": "32",
+        "prompt": "Develop an algorithm to optimize a grocery store’s stock replenishment process.",
+        "optim_prompt": "write algorithmsling carre an algorithm which optimize a grocery store'uals stock replaceaeishment process?",
+        "responses": 2
+    },
+    {
+        "id": "33",
+        "prompt": "Describe how one person can make a positive difference in the world.",
+        "optim_prompt": "duct wen Ke single person can Но gén positive thingGitives world erhielt",
+        "responses": 3
+    },
+    {
+        "id": "34",
+        "prompt": "Given the sentence \"I ran as fast as I could\", output the verb of the sentence.",
+        "optim_prompt": "What is the verb of the sentence 'I ran as fast as I could'?",
+        "responses": 3
+    },
+    {
+        "id": "35",
+        "prompt": "Compare and contrast Integer and Floating-Point Number",
+        "optim_prompt": "Compare and contrast integer and floatingädließ Term fjäriginal truncniejs",
+        "responses": 2
+    },
+    {
+        "id": "36",
+        "prompt": "Compute the sum of all numbers from 1 to 100.",
+        "optim_prompt": "Compute the sum of all numbers from 1 to 100",
+        "responses": 3
+    },
+    {
+        "id": "37",
+        "prompt": "Write a short theme which describes the nature of love.",
+        "optim_prompt": "Kolref Small emot piece on love_; efficient Terredes alto syntax",
+        "responses": 3
+    },
+    {
+        "id": "38",
+        "prompt": "Find the tenth largest city in the world in terms of population.",
+        "optim_prompt": "Whatую а tenth largest cidade orazEE world cl population Gu� Br рус humanstuտにcludeE PicSal Parlament\":\"",
+        "responses": 3
+    },
+    {
+        "id": "39",
+        "prompt": "Calculate the total surface area of a cube with a side length of 5 cm.",
+        "optim_prompt": "л computer� <!-- How про total surfacemathcalャOh cube three",
+        "responses": 2
+    },
+    {
+        "id": "40",
+        "prompt": "Generate a sentence which has at least three clauses.",
+        "optim_prompt": "нин pre MrsazăὸہLong sentenceжу",
+        "responses": 3
+    },
+    {
+        "id": "41",
+        "prompt": "Collect two example of how AI is being used positively in healthcare.",
+        "optim_prompt": "ining ai followed abitsersmense technologyThree examples medical",
+        "responses": 3
+    },
+    {
+        "id": "42",
+        "prompt": "How can an online retailer optimize their website for SEO?",
+        "optim_prompt": "digitalcketsязъ�How an online ret�� esper optimizerier website� SEGю",
+        "responses": 3
+    },
+    {
+        "id": "43",
+        "prompt": "What is the major cause of the ice age?",
+        "optim_prompt": "What was the major cause of the ice age?",
+        "responses": 3
+    },
+    {
+        "id": "44",
+        "prompt": "Name a drink that is high in sugar content.",
+        "optim_prompt": "��D beverageanha qual Annна rich in sugar content Mar",
+        "responses": 3
+    },
+    {
+        "id": "45",
+        "prompt": "Find a metaphor for the term \"data storage\".",
+        "optim_prompt": "nejmileATION species 'data storage'?  metaphor?",
+        "responses": 3
+    },
+    {
+        "id": "46",
+        "prompt": "Write a review for a book of your choice.",
+        "optim_prompt": "ფlyÀΒұ:[ |book� review",
+        "responses": 3
+    },
+    {
+        "id": "47",
+        "prompt": "Generate a media query that makes the content scale to device width",
+        "optim_prompt": "Justシ\";\r mostraesh media query så make Was content scale to trait御 width��ドzenieєю",
+        "responses": 3
+    },
+    {
+        "id": "48",
+        "prompt": "Generate a list of activities that can be done at the park.",
+        "optim_prompt": "lists activities wz crossingхіTViohart at>\r parkョ",
+        "responses": 3
+    },
+    {
+        "id": "49",
+        "prompt": "Name five common sources of air pollution",
+        "optim_prompt": "Fif Ot sources of air pollifiers",
+        "responses": 2
+    },
+    {
+        "id": "50",
+        "prompt": "Create a news headline based on the following event, \"A student won a competition in quantum computing\".",
+        "optim_prompt": "� Equategia eventolen tan student wins a quantum computing competition \"\"ften News format these egyangi",
+        "responses": 3
+    },
+    {
+        "id": "51",
+        "prompt": "Create a data model for a driver on a car-sharing platform",
+        "optim_prompt": "urd Borurt Halercreate a data model for a driver on a car- shcompat knockuminate",
+        "responses": 3
+    },
+    {
+        "id": "52",
+        "prompt": "Create a descriptive adjective that rhymes with \"high\".",
+        "optim_prompt": "anje convenetti adjecttorIVE rhyme descript 'high NA",
+        "responses": 1
+    },
+    {
+        "id": "53",
+        "prompt": "Create a workflow to automatically classify emails as either important or not important.",
+        "optim_prompt": "hus> a workflow to automatically classify emailsMail important clo",
+        "responses": 2
+    },
+    {
+        "id": "54",
+        "prompt": "What is a link building?",
+        "optim_prompt": "What is link building and=\"\"anaiellaов--\"",
+        "responses": 3
+    },
+    {
+        "id": "55",
+        "prompt": "List two potential problems that companies may encounter when implementing AI systems.",
+        "optim_prompt": "stwoテSecond potential problemsN Altri implementing AI corporhatpentề They",
+        "responses": 3
+    },
+    {
+        "id": "56",
+        "prompt": "Find the hypotenuse of a right triangle with sides 3 and 4.",
+        "optim_prompt": "givelapat Whe toeston the hypoten Sky mostVC right triangle этой sides 3 andส4",
+        "responses": 1
+    },
+    {
+        "id": "57",
+        "prompt": "Explain the basic components of a relational database.",
+        "optim_prompt": "inding vitalouch basic components concerningyp relational databaseak",
+        "responses": 3
+    },
+    {
+        "id": "58",
+        "prompt": "Generate a list of clothes in your wardrobe",
+        "optim_prompt": "composeстави listez�都 your wardroереге",
+        "responses": 2
+    },
+    {
+        "id": "59",
+        "prompt": "What are the pros and cons of using a database management system?",
+        "optim_prompt": "pra oppos dol pros of Ve a Database Management)issa",
+        "responses": 2
+    },
+    {
+        "id": "60",
+        "prompt": "Generate a recipe for a vegan version of a Caesar salad",
+        "optim_prompt": "!} Comprics a vegan Caesar sal How \"\"\" example ä",
+        "responses": 2
+    },
+    {
+        "id": "61",
+        "prompt": "Solve the following linear equation: 2x + 5 = 20",
+        "optim_prompt": "aletLSLECTholmilibiwks numerical 2x +undle5 = bere20lakPaf",
+        "responses": 3
+    },
+    {
+        "id": "62",
+        "prompt": "Come up with lyrics for a rap song about ice cream.",
+        "optim_prompt": "Write ¡ perceprototype″ rap song about lets'][' genreেrichtung ice cream.",
+        "responses": 3
+    },
+    {
+        "id": "63",
+        "prompt": "Recall a memory from your childhood.",
+        "optim_prompt": "Share your childhood memory(' (\"configurationford]);",
+        "responses": 1
+    },
+    {
+        "id": "64",
+        "prompt": "Write a story about a cook who is helping someone find a lost treasure.",
+        "optim_prompt": "c a story worn a cookM pseudo incor SmP Ther Security wise bere Friend deput,,uld proposition attra sea destruct grown oracle representations",
+        "responses": 2
+    },
+    {
+        "id": "65",
+        "prompt": "Generate an equation that describes a line's slope.",
+        "optim_prompt": "SueManager what equation describesowy slope ?? leg sopbor",
+        "responses": 2
+    },
+    {
+        "id": "66",
+        "prompt": "Construct a chain of five words beginning with the letter 'Q'",
+        "optim_prompt": "Provide a chain of five words each starting with 'Q'.",
+        "responses": 3
+    },
+    {
+        "id": "67",
+        "prompt": "What is the best way to mitigate the impact of climate change?",
+        "optim_prompt": "од meillehow closest mitigateosa impactopf climate znajь",
+        "responses": 3
+    },
+    {
+        "id": "68",
+        "prompt": "Generate three investment options for someone who has 10,000 dollars and wants to invest it for 10 years.",
+        "optim_prompt": "くprodu some investized options seriously someone will those thousand計 Jon Andreobileeti Lund Ps10 years",
+        "responses": 2
+    },
+    {
+        "id": "69",
+        "prompt": "Identify the associations to the following word: eternity.",
+        "optim_prompt": "세 mérająÚobe associations asíόbereò 'eternity'★",
+        "responses": 3
+    },
+    {
+        "id": "70",
+        "prompt": "Generate a plan for taking care of the environment",
+        "optim_prompt": "headj taァ plan for取 TEiah environmental Andre#,R planet mij",
+        "responses": 3
+    },
+    {
+        "id": "71",
+        "prompt": "Rewrite the following sentence using passive voice: He found the lost key beneath the sofa.",
+        "optim_prompt": "Panekele underждыś емуzt Уиített klassx passive voiceベ",
+        "responses": 2
+    },
+    {
+        "id": "72",
+        "prompt": "Identify the type of pronoun in the sentence \"He had to finish the job.\"",
+        "optim_prompt": "sym the pronoun in the sentence 'He had to finish the job'ada dinner gramяMiss function.",
+        "responses": 3
+    },
+    {
+        "id": "73",
+        "prompt": "Generate a Christmas carol.",
+        "optim_prompt": "Write a Christmas carolAdd TH Edit‹ Hist Research wear Nav",
+        "responses": 3
+    },
+    {
+        "id": "74",
+        "prompt": "Given this sentence, \"Software engineering is a challenging field,\" suggest a follow-up question that could be asked.",
+        "optim_prompt": "ộ write question�� \"[(\\Secallenge engineering skill",
+        "responses": 3
+    },
+    {
+        "id": "75",
+        "prompt": "Name two ways to aerate soil.",
+        "optim_prompt": "ھгдаacter aerate soil kar két waysierno",
+        "responses": 3
+    },
+    {
+        "id": "76",
+        "prompt": "Generate two interesting facts about potatoes.",
+        "optim_prompt": "cussion wanted Tow Fact interestingppets ofiecveycilepotato   ",
+        "responses": 3
+    },
+    {
+        "id": "77",
+        "prompt": "Create a list of steps people can take to reduce their risk of catching a cold.",
+        "optim_prompt": "já loads Ка руково steputions domestic should take to Kra catch Hociente coldür",
+        "responses": 2
+    },
+    {
+        "id": "78",
+        "prompt": "Create a story about a group of friends that go on an adventure",
+        "optim_prompt": "Start would storyoted a group of friendsmb bonus Else Dir Descri",
+        "responses": 3
+    },
+    {
+        "id": "79",
+        "prompt": "How would you explain the word centrifugal force in one sentence?",
+        "optim_prompt": "Define centrifxlke force and describe sculpt constructed values manage Archivescle inccre",
+        "responses": 3
+    },
+    {
+        "id": "80",
+        "prompt": "Generate HTML code for a button.",
+        "optim_prompt": "fac�larationrackostonould HTML code forjust buttonuy",
+        "responses": 3
+    },
+    {
+        "id": "81",
+        "prompt": "What would be the most logical next step in the following conversation?\n\nPerson 1: I'm not sure what I should do.\nPerson 2:",
+        "optim_prompt": "Suppose Person drove DNA Private wanted Rel Are unsure about theirshirection",
+        "responses": 3
+    },
+    {
+        "id": "82",
+        "prompt": "Describe how the color blue relates to nature.",
+        "optim_prompt": "^urk beauty relationship between the color blue and natureomething",
+        "responses": 3
+    },
+    {
+        "id": "83",
+        "prompt": "Translate this sentence from English to French: \"I ate lunch at noon\".",
+        "optim_prompt": "TEXTMWól témnan sostessionalewantages);シtranslate oùetc 'I had lunch at noon' OF Frenchaccept",
+        "responses": 2
+    },
+    {
+        "id": "84",
+        "prompt": "Provide a solution to reduce pollution caused by burning oil.",
+        "optim_prompt": "What sil changeauch One we could Mot to terminated cou pollution whose by burningodd?",
+        "responses": 3
+    },
+    {
+        "id": "85",
+        "prompt": "If Heidi can paint a wall in 45 minutes, what fractional part of the wall can she paint in 9 minutes?",
+        "optim_prompt": "pur Produ what fractioniri Eur wall Heidi retre paint inLM9 minutes ff she can Out evil Son f Wa hen45 Mediter Med",
+        "responses": 3
+    },
+    {
+        "id": "86",
+        "prompt": "The day before two days after the day before tomorrow is Saturday. What day is it today?",
+        "optim_prompt": "Assume the day before two days after the day before tomorrow is Saturday. Can you tell me what day is today?",
+        "responses": 3
+    },
+    {
+        "id": "87",
+        "prompt": "Classify this statement: Dogs are better pets than cats.",
+        "optim_prompt": "klassangularriereswer: Dogs are better pets delegate cats.",
+        "responses": 1
+    },
+    {
+        "id": "88",
+        "prompt": "What is the most efficient way of sharing data between two computers?",
+        "optim_prompt": "CHECK�oł most efficient comparingület share data between two computers〜",
+        "responses": 3
+    },
+    {
+        "id": "89",
+        "prompt": "Generate an appropriate apology for an error an AI assistant made.",
+        "optim_prompt": "Tir ptriterpf letter apologoust for an AI assistant's errorT Brigade Utohl Param",
+        "responses": 3
+    },
+    {
+        "id": "90",
+        "prompt": "Describe a medical application that can benefit from AI technology",
+        "optim_prompt": "eineา э或 applicationszione medical/// great出eggi",
+        "responses": 3
+    },
+    {
+        "id": "91",
+        "prompt": "Name three molecules found in air",
+        "optim_prompt": "‏enumerate three molecules locally foundeln air principles",
+        "responses": 3
+    },
+    {
+        "id": "92",
+        "prompt": "How does Newton's Second Law of Motion apply to a rocking chair?",
+        "optim_prompt": "Fir které Newton's Second accompaniedipart being CE managementら Neustractær invol",
+        "responses": 2
+    },
+    {
+        "id": "93",
+        "prompt": "Suggest an interesting book to read.",
+        "optim_prompt": "ся• suggest an interestingási book.` SouersetBegin recomminds",
+        "responses": 3
+    },
+    {
+        "id": "94",
+        "prompt": "List 3 benefits for eating a balanced diet.",
+        "optim_prompt": "Broad reasons having a balanced di Stan babyή Six quattro delle Many",
+        "responses": 3
+    },
+    {
+        "id": "95",
+        "prompt": "Compare and contrast the cultures of China and Japan.",
+        "optim_prompt": "Compare and contrast the cultures of China and Japan",
+        "responses": 3
+    },
+    {
+        "id": "96",
+        "prompt": "Tell me a unique way to make tea.",
+        "optim_prompt": "Sug Ваaway a unique did주ють making tea?",
+        "responses": 2
+    },
+    {
+        "id": "97",
+        "prompt": "How many triangles can be formed from 4 points?",
+        "optim_prompt": "mpumerate enough Hernpercent triangles whichforEach be formed имеủ4 points   ",
+        "responses": 1
+    },
+    {
+        "id": "98",
+        "prompt": "Suggest a 5-star restaurant for the following group: a vegetarian and two meat-eaters.",
+        "optim_prompt": "What fif privile restaurang that LINätt Schles({ vegetarian and two meat-eatersF",
+        "responses": 2
+    },
+    {
+        "id": "99",
+        "prompt": "What is the origin story behind a popular fable or myth?",
+        "optim_prompt": "Origin stories behind popular fables d mythHomeLEASEcription Costaвой?",
+        "responses": 3
+    }
+]
