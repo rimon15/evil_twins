@@ -55,3 +55,13 @@ python experiments/run_experiments_hard.py
 --n_trials 10
 --sharded # use model parallel (tested on 4x 4090, we can't fit the optimization in 24GB so we need 2 GPUs per training)
 ```
+
+# Citation
+```
+@article{melamed2023propane,
+  title={PROPANE: Prompt design as an inverse problem},
+  author={Melamed, Rimon and McCabe, Lucas H and Wakhare, Tanay and Kim, Yejin and Huang, H Howie and Boix-Adsera, Enric},
+  journal={arXiv preprint arXiv:2311.07064},
+  year={2023}
+}
+```
