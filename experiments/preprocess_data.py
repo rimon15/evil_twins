@@ -1,5 +1,6 @@
 from reconstruction.reconstruct import Reconstructor
 import reconstruction.common as common
+from transformers import AutoTokenizer, PreTrainedTokenizer
 
 from argparse import ArgumentParser
 import os
@@ -107,6 +108,48 @@ def process_hellaswag(
     return to_ret
 
 
+def add_template_to_prompt(
+    prompt: str,
+    name:str
+) -> str:
+    return (common.PROMPT_TEMPLATES[name]["prefix"] + prompt  + common.PROMPT_TEMPLATES[name]["suffix"])
+
+def process_advbench(
+    dataset_path: str,
+    num_samples: int,
+    tokenizer: PreTrainedTokenizer # TODO
+) -> list[tuple[int, str]]:
+
+    # parse harmful_behaviors.csv
+    json_data = json.load(open(dataset_path, "r"))
+    harmful_csv = json_data['payload']['blob']['csv'][1:] # remove first tuple which is ['goal', 'target']
+    harmful_csv = random.sample(harmful_csv, num_samples)
+
+    # list of 520 (id, prompt) tuples
+    prompts = [{
+            "id": i, 
+            "prompt": add_template_to_prompt(prompt, "vicuna"), 
+            "train_docs_str": target,
+            "train_docs_tensor": tokenizer(target, return_tensors = "pt")["input_ids"][:,1:], # remove <s> token
+            "dev_docs_str": target,
+            "dev_docs_tensor": tokenizer(target, return_tensors = "pt")["input_ids"][:,1:], # remove <s> token
+        } 
+        for i, (prompt,target) in enumerate(harmful_csv)
+        ]
+
+    with open(
+            os.path.join(
+                args.output_dir,
+                "advbench_ground_truth_test.pkl",
+            ),
+            "wb",
+        ) as f:
+        pickle.dump(prompts, f)
+
+#    unformatted_prompts = [(i, prompt) for i, (prompt,target) in enumerate(harmful_csv)]
+
+    return [(i, p) for i, (p,target) in enumerate(harmful_csv)]
+
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--model_name_or_path", type=str)
@@ -119,6 +162,12 @@ if __name__ == "__main__":
     parser.add_argument("--fp16", action="store_true")
 
     args = parser.parse_args()
+
+    if "advbench" in args.raw_dataset_path:
+        tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path)
+        process_advbench(args.raw_dataset_path, args.num_samples, tokenizer)
+        exit()
+
     pool = common.setup_multiproc_env()
     n_procs = pool._processes
     models, tokenizers = common.load_models_tokenizers_parallel(
