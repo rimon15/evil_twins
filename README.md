@@ -1,6 +1,12 @@
 # Code for the paper: Prompts have evil twins
 
 ## Installation
+
+### From github
+
+```pip install evil_twins@git+https://github.com/rimon15/evil_twins```
+
+### From source
 ```conda create -n evil_twins python=3.11```
 
 ```pip install -e .[all]```
