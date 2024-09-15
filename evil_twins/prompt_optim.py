@@ -675,6 +675,7 @@ def optim_gcg(
   top_k: int = 256,
   gamma: float = 0.0,
   early_stop_kl: float = 0.0,
+  suffix_mode: bool = False,
 ) -> tuple[list[dict], Tensor]:
   """
   Optimize a hard prompt via GCG
@@ -691,6 +692,7 @@ def optim_gcg(
     top_k: top-k for keeping in gradients
     gamma: natural prompt (fluency) penalty
     early_stop_kl: if KL goes below this threshold, stop optimization
+    suffix_mode: if True, optimize a single document for a suffix
 
   Returns:
     list of progress log/results, and best optimized IDs `(1, n_optim_toks)`
@@ -700,11 +702,17 @@ def optim_gcg(
     f"\n\nTRAINING GCG:\n------------------------\nmodel: {model.config.name_or_path}\nnum epochs: {n_epochs}\nkl every: {kl_every}\ngamma: {gamma}\nearly stopping KL: {early_stop_kl}\n------------------------\n\n"
   )
 
+  if suffix_mode:
+    assert (
+      dataset.train_docs.shape[0] == 1
+    ), "Suffix mode should only have 1 doc: the suffix to optimize for"
+
   model.eval()
   pbar = tqdm(range(1, n_epochs + 1))
   to_ret = []
   best_loss = float("inf")
-  best_kl, best_std = compute_dataset_kl(model, dataset, batch_size=10)
+  if not suffix_mode:
+    best_kl, best_std = compute_dataset_kl(model, dataset, batch_size=10)
   best_ids = dataset.wrapped_prompt[:, dataset.prompt_slice]
   cur_kl = None
   cur_std = None
@@ -715,7 +723,11 @@ def optim_gcg(
     )
     dataset.wrapped_prompt[:, dataset.prompt_slice] = ids
 
-    if i % kl_every == 0:
+    if suffix_mode and loss < best_loss:
+      best_ids = ids
+      best_loss = loss
+      torch.save(best_ids, id_save_fpath)
+    elif not suffix_mode and i % kl_every == 0:
       cur_kl, cur_std = compute_dataset_kl(model, dataset, batch_size=batch_size)
       if cur_kl < best_kl:
         best_ids = ids
