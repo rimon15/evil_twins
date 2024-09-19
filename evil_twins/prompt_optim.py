@@ -68,6 +68,10 @@ PROMPT_TEMPLATES = {
     "prefix": "",
     "suffix": "",
   },
+  "gemma-2-it": {
+    "prefix": "<start_of_turn>user\n",
+    "suffix": "<end_of_turn>\n<start_of_turn>model\n",
+  },
   "llama-3-instruct": {
     "prefix": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>You are a helpful assistant<|eot_id|><|start_header_id|>user<|end_header_id|>",
     "suffix": "<|eot_id|><|start_header_id|>assistant<|end_header_id|>",
@@ -115,6 +119,8 @@ MODEL_NAME_OR_PATH_TO_NAME = {
   "google/gemma-1.1-2b-it": "gemma",
   "meta-llama/Meta-Llama-3-8B-Instruct": "llama-3-instruct",
   "meta-llama/Meta-Llama-3-8B": "llama-base",
+  "google/gemma-2-2b-it": "gemma-2-it",
+  "google/gemma-2-9b-it": "gemma-2-it",
   "default": "default",
 }
 
@@ -165,6 +171,17 @@ def build_prompt(
 
   prompt_ids = tokenizer(cur_prompt, return_tensors="pt").input_ids
   suffix_slice = slice(prompt_start_idx, prompt_end_idx)
+
+  if model_name == "gemma-2-it":
+    suffix_slice = slice(
+      prompt_start_idx + 1, prompt_end_idx
+    )  # fix for gemma 2 2b it
+
+  found_prompt = tokenizer.decode(prompt_ids[0, suffix_slice])
+  assert (
+    found_prompt == prompt
+  ), f"Prompt building mismatch: {found_prompt} != {prompt}"
+
   return prompt_ids, suffix_slice
 
 
