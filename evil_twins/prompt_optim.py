@@ -160,6 +160,17 @@ def build_prompt(
   """
 
   if model_name not in MODEL_NAME_OR_PATH_TO_NAME:
+    # first try to match it
+    found = False
+    for key in MODEL_NAME_OR_PATH_TO_NAME:
+      if key.split("/")[-1] in model_name:
+        model_name = key
+        print(f"Custom path provided, using model name: {model_name}")
+        found = True
+        break
+
+  if not found:
+    print(f"Model {model_name} name not found, using default (no template)")
     model_name = "default"
 
   model_name = MODEL_NAME_OR_PATH_TO_NAME[model_name]
