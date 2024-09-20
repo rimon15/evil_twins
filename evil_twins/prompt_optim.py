@@ -774,6 +774,9 @@ def optim_gcg(
         "best_std": best_std,
         "cur_kl": cur_kl if cur_kl is not None else best_kl,
         "cur_std": cur_std if cur_std is not None else best_std,
+        "orig_prompt": tokenizer.decode(
+          dataset.orig_wrapped_prompt[0, dataset.orig_prompt_slice]
+        ),
         "prompt": tokenizer.decode(ids[0]),
         "nll_prompt": -log_prob_prompt,
       }
