@@ -1,4 +1,4 @@
-# Code for the paper: Prompts have evil twins
+# Code for the paper: Prompts have evil twins (EMNLP 2024)
 
 ## Installation
 
