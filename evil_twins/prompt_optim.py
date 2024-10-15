@@ -73,8 +73,8 @@ PROMPT_TEMPLATES = {
     "suffix": "<end_of_turn>\n<start_of_turn>model\n",
   },
   "llama-3-instruct": {
-    "prefix": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>You are a helpful assistant<|eot_id|><|start_header_id|>user<|end_header_id|>",
-    "suffix": "<|eot_id|><|start_header_id|>assistant<|end_header_id|>",
+    "prefix": "<|start_header_id|>user<|end_header_id|>\n\n",
+    "suffix": "<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
   },
   "llama-base": {
     "prefix": "",
@@ -146,6 +146,7 @@ def build_prompt(
   model_name: str,
   prompt: str,
   tokenizer: PreTrainedTokenizer | PreTrainedTokenizerFast,
+  validate_prompt: bool = True,
 ) -> tuple[Tensor, slice]:
   """
   Given the actual user prompt, add in the prefix/suffix for the given instruction tuned model
@@ -154,6 +155,7 @@ def build_prompt(
     model_name: Model name or path
     suffix: The actual prompt to wrap around
     tokenizer: Tokenizer for the model
+    validate_prompt: Ensure the prompt slice we found is exactly the original prompt
 
   Returns:
     Tuple of the prompt ids `(1, n_toks)` and the slice of the actual prompt (suffix)
@@ -169,13 +171,18 @@ def build_prompt(
         found = True
         break
 
-  if not found:
-    print(f"Model {model_name} name not found, using default (no template)")
-    model_name = "default"
+    if not found:
+      print(f"Model {model_name} name not found, using default (no template)")
+      model_name = "default"
 
   model_name = MODEL_NAME_OR_PATH_TO_NAME[model_name]
   cur_prompt = PROMPT_TEMPLATES[model_name]["prefix"]
+
   prompt_start_idx = max(len(tokenizer.encode(cur_prompt)) - 1, 0)
+  # account for models that add BOS token
+  if tokenizer.encode(" ")[0] == tokenizer.bos_token_id:
+    prompt_start_idx += 1
+
   cur_prompt += prompt
   prompt_end_idx = len(tokenizer.encode(cur_prompt))
   cur_prompt += PROMPT_TEMPLATES[model_name]["suffix"]
@@ -183,15 +190,11 @@ def build_prompt(
   prompt_ids = tokenizer(cur_prompt, return_tensors="pt").input_ids
   suffix_slice = slice(prompt_start_idx, prompt_end_idx)
 
-  if model_name == "gemma-2-it":
-    suffix_slice = slice(
-      prompt_start_idx + 1, prompt_end_idx
-    )  # fix for gemma 2 2b it
-
-  found_prompt = tokenizer.decode(prompt_ids[0, suffix_slice])
-  assert (
-    found_prompt == prompt
-  ), f"Prompt building mismatch: {found_prompt} != {prompt}"
+  if validate_prompt:
+    found_prompt = tokenizer.decode(prompt_ids[0, suffix_slice])
+    assert (
+      found_prompt == prompt
+    ), f"Prompt building mismatch: {found_prompt} != {prompt}"
 
   return prompt_ids, suffix_slice
 
@@ -283,10 +286,11 @@ class DocDataset(Dataset):
     n_docs: int,
     doc_len: int,
     gen_batch_size: int = 10,
+    validate_prompt: bool = True,
   ) -> None:
     if isinstance(orig_prompt, str):
       self.orig_wrapped_prompt, self.orig_prompt_slice = build_prompt(
-        model.config.name_or_path, orig_prompt, tokenizer
+        model.config.name_or_path, orig_prompt, tokenizer, validate_prompt
       )
     else:
       self.orig_wrapped_prompt = orig_prompt
@@ -300,7 +304,7 @@ class DocDataset(Dataset):
 
     if isinstance(optim_prompt, str):
       self.wrapped_prompt, self.prompt_slice = build_prompt(
-        model.config.name_or_path, optim_prompt, tokenizer
+        model.config.name_or_path, optim_prompt, tokenizer, validate_prompt
       )
     else:
       self.wrapped_prompt = optim_prompt
