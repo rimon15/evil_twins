@@ -203,7 +203,7 @@ def load_model_tokenizer(
   model_name_or_path: str,
   dtype: torch.dtype = torch.bfloat16,
   device_map: str | dict = "auto",
-  use_flash_attn_2: bool = True,
+  use_flash_attn_2: bool = False,
   eval_mode: bool = True,
 ) -> tuple[PreTrainedModel, PreTrainedTokenizer | PreTrainedTokenizerFast]:
   """
