@@ -118,6 +118,7 @@ MODEL_NAME_OR_PATH_TO_NAME = {
   "google/gemma-2b-it": "gemma",
   "google/gemma-1.1-2b-it": "gemma",
   "meta-llama/Meta-Llama-3-8B-Instruct": "llama-3-instruct",
+  "meta-llama/Llama-3.1-8B-Instruct": "llama-3-instruct",
   "meta-llama/Meta-Llama-3-8B": "llama-base",
   "google/gemma-2-2b-it": "gemma-2-it",
   "google/gemma-2-9b-it": "gemma-2-it",
