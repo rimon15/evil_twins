@@ -82,13 +82,24 @@ res, embs = optim_soft(
 
 # Citation
 ```
-@misc{melamed2024prompteviltwins,
-      title={Prompt have evil twins}, 
-      author={Rimon Melamed and Lucas H. McCabe and Tanay Wakhare and Yejin Kim and H. Howie Huang and Enric Boix-Adsera},
-      year={2024},
-      eprint={2311.07064},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2311.07064}, 
+@inproceedings{melamed-etal-2024-prompts,
+    title = "Prompts have evil twins",
+    author = "Melamed, Rimon  and
+      McCabe, Lucas  and
+      Wakhare, Tanay  and
+      Kim, Yejin  and
+      Huang, H. Howie  and
+      Boix-Adser{\`a}, Enric",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.emnlp-main.4",
+    pages = "46--74",
+    abstract = "We discover that many natural-language prompts can be replaced by corresponding prompts that are unintelligible to humans but that provably elicit similar behavior in language models. We call these prompts {``}evil twins{''} because they are obfuscated and uninterpretable (evil), but at the same time mimic the functionality of the original natural-language prompts (twins). Remarkably, evil twins transfer between models. We find these prompts by solving a maximum-likelihood problem which has applications of independent interest.",
 }
 ```
