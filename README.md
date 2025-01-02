@@ -81,7 +81,7 @@ res, embs = optim_soft(
 ```
 
 # Citation
-```
+```bibtex
 @inproceedings{melamed-etal-2024-prompts,
     title = "Prompts have evil twins",
     author = "Melamed, Rimon  and
