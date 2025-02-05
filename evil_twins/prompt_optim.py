@@ -80,6 +80,14 @@ PROMPT_TEMPLATES = {
     "prefix": "",
     "suffix": "",
   },
+  "qwen-2-instruct": {
+    "prefix": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n",
+    "suffix": "<|im_end|>\n<|im_start|>",
+  },
+  "smollm-2-instruct": {
+    "prefix": "<|im_start|>system\nYou are a helpful AI assistant named SmolLM, trained by Hugging Face<|im_end|>\n<|im_start|>user\n",
+    "suffix": "<|im_end|>\n<|im_start|>assistant\n",
+  },
   "default": {
     "prefix": "",
     "suffix": "",
@@ -122,6 +130,12 @@ MODEL_NAME_OR_PATH_TO_NAME = {
   "meta-llama/Meta-Llama-3-8B": "llama-base",
   "google/gemma-2-2b-it": "gemma-2-it",
   "google/gemma-2-9b-it": "gemma-2-it",
+  "HuggingFaceTB/SmolLM2-135M-Instruct": "smollm-2-instruct",
+  "HuggingFaceTB/SmolLM2-360M-Instruct": "smollm-2-instruct",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct": "smollm-2-instruct",
+  "Qwen/Qwen2.5-0.5B-Instruct": "qwen-2-instruct",
+  "Qwen/Qwen2.5-1.5B-Instruct": "qwen-2-instruct",
+  "Qwen/Qwen2.5-7B-Instruct": "qwen-2-instruct",
   "default": "default",
 }
 
@@ -181,7 +195,7 @@ def build_prompt(
 
   prompt_start_idx = max(len(tokenizer.encode(cur_prompt)) - 1, 0)
   # account for models that add BOS token
-  if tokenizer.encode(" ")[0] == tokenizer.bos_token_id:
+  if tokenizer.encode(cur_prompt)[0] == tokenizer.bos_token_id:
     prompt_start_idx += 1
 
   cur_prompt += prompt
@@ -193,6 +207,7 @@ def build_prompt(
 
   if validate_prompt:
     found_prompt = tokenizer.decode(prompt_ids[0, suffix_slice])
+
     assert (
       found_prompt == prompt
     ), f"Prompt building mismatch: {found_prompt} != {prompt}"
