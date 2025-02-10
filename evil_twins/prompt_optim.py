@@ -199,12 +199,18 @@ def build_prompt(
   cur_prompt = PROMPT_TEMPLATES[model_name]["prefix"]
 
   prompt_start_idx = max(len(tokenizer.encode(cur_prompt)) - 1, 0)
+
   # account for models that add BOS token (account for models that dont have BOS but do have <|im_start|>)
-  if tokenizer.encode(cur_prompt)[0] == tokenizer.bos_token_id or (
+  if prompt_start_idx == 0:
+    if tokenizer.encode("test")[0] == tokenizer.bos_token_id:
+      # base model that adds BOS
+      prompt_start_idx += 1
+  elif tokenizer.encode(cur_prompt)[0] == tokenizer.bos_token_id or (
     tokenizer.bos_token_id is None
     and tokenizer.decode(tokenizer.encode(cur_prompt)[0])
     in tokenizer.special_tokens_map["additional_special_tokens"]
   ):
+    # instruct model that also adds some kind of BOS
     prompt_start_idx += 1
 
   cur_prompt += prompt
